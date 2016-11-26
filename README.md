@@ -14,4 +14,4 @@ Create an R script called `run_analysis.R` that does the following:
 
 This repository contains R code that downloads the `Human Activity Recognition Using Smartphones Dataset Version 1.0` and preprocessess the data set to get `tidy_data.txt` data file.
 
-See `CodeBook.md` for details.
+See `CodeBook.md` for further details.
