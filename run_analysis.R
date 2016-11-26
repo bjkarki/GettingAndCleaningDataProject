@@ -92,9 +92,10 @@ rm(activity_labels,features,required_features)
 ## Reshaping data using melt
 id.vars <- c("subject","activityid","activitylabel")
 measure.vars <- setdiff(names(requiredData),id.vars)
-melt_data <- melt(requiredData,id.vars = id.vars,measure.vars = measure.vars)
-rm(required_data)
+meltData <- melt(requiredData,id.vars = id.vars,measure.vars = measure.vars)
+rm(requiredData, id.vars,measure.vars)
 
 ## Getting the average for each subject and activity using dcast function
-tidy_data <- dcast(melt_data, subject + activitylabel ~ variable, mean)
-write.table("tidy_data.txt")
+tidyData <- dcast(meltData, subject + activitylabel ~ variable, mean)
+write.table(tidyData,file = "UCI HAR Dataset/tidy_data.txt")
+rm(meltData)
