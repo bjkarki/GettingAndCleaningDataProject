@@ -93,7 +93,7 @@ rm(activity_labels,features,required_features)
 id.vars <- c("subject","activityid","activitylabel")
 measure.vars <- setdiff(names(requiredData),id.vars)
 meltData <- melt(requiredData,id.vars = id.vars,measure.vars = measure.vars)
-rm(requiredData, id.vars,measure.vars)
+rm(id.vars,measure.vars)
 
 ## Getting the average for each subject and activity using dcast function
 tidyData <- dcast(meltData, subject + activitylabel ~ variable, mean)
@@ -107,5 +107,5 @@ if (file.exists("UCI HAR Dataset/tidy_data.txt")) {
 ## Writing the tidy_data.txt file
 write.table(tidyData,file = "UCI HAR Dataset/tidy_data.txt",row.names = FALSE)
 message("'tidy_data.txt' file created under the directory 'UCI HAR Dataset'")
-rm(meltData, tidyData)
+rm(meltData)
 setwd("..")
