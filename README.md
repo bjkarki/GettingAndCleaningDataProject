@@ -9,5 +9,6 @@ Run the script from the working directory. The script produces a single output f
 ###References
 [Original Data]
 (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
+
 [Human Activity Recognition Using Smartphones]
 (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
